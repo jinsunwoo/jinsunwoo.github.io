@@ -93,6 +93,7 @@ h5 {
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 3px 0;
+  line-height: 140%;
 }
 
 /* Navbar */
@@ -116,6 +117,7 @@ h5 {
 .nav-bar__menu {
   display: flex;
   padding-right: 5px;
+  padding-top: 10px;
 }
 
 .nav-bar__menu.open {
@@ -210,7 +212,7 @@ h5 {
   color: var(--color-black);
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
-  margin: 15px 5px;
+  margin: 5px 3px;
   padding: 6px 9px;
   border: 2px solid var(--color-black);
   border-radius: var(--size-border-radius);
@@ -221,7 +223,7 @@ h5 {
   color: var(--color-black);
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
-  margin: 12px 5px 15px 5px;
+  margin: 15px 5px 3px 5px;
   padding: 6px 9px;
   border: 2px solid var(--color-black);
   border-radius: var(--size-border-radius);
@@ -315,4 +317,37 @@ h5 {
 
 .hiddenWords {
   color: white;
+}
+
+.modal-content {
+  background: transparent;
+  border: none;
+}
+
+.modal-dialog {
+  max-width: 850px;
+  margin: 2rem auto;
+}
+
+.project__img {
+  border-bottom: 2px solid gainsboro;
+}
+
+.project__detail-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.project__detail--description {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.project__detail--description--words {
+  padding-bottom: 5px;
+}
+
+#jinsunwoo {
+  pointer-events: none;
+  cursor: default;
 }

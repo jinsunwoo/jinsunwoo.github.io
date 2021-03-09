@@ -15,6 +15,13 @@
     -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Bootstrap javascript-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--Linking to css-->
     <link rel="stylesheet" href="style.css">
     <!--Linking to javascript-->
@@ -24,7 +31,7 @@
     <nav id="nav-bar">
         <div class="nav-bar__logo">
             <i class="fas fa-laptop-code" id="nav-bar-favicon"></i>
-            <a href="#">Jin Sunwoo</a>
+            <a href="#" id="jinsunwoo">Jin Sunwoo</a>
         </div>
         <ul class="nav-bar__menu">
             <li class="nav-bar__menu__item active" data-link="#home">Home</li>
@@ -43,13 +50,13 @@
         <h1 class="home__title">Hello, <br> I am Jin Sunwoo</h1>
         <h2 class="home__description">Computer Science Coop @ McMaster Univ.</h2>
         <div class="home__contacts">
-            <button class="home__contactBtn">
+            <button class="home__contactBtn" onclick="window.location.href='mailto: sunwooj@mcmaster.ca';">
                 <i class="far fa-envelope"></i>
                 Email</button>
-            <button class="home__contactBtn">
+            <button class="home__contactBtn" onclick="window.location.href='https://www.linkedin.com/in/jin-sunwoo-27672812b/';">
                 <i class="fab fa-linkedin"></i>
                 LinkedIn</button>
-            <button class="home__contactBtn">
+            <button class="home__contactBtn" onclick="window.location.href='https://www.github.com/jinsunwoo/';">
                 <i class="fab fa-github"></i>
                 GitHub</button>
             <button class="home__contactBtn">
@@ -60,9 +67,9 @@
     <section id="about" class="section">
         <h2 class="hiddenWords">About Me</h2>
         <h1>About Me</h1>
-        <p>My name is Jin Sunwoo and I am a Computer Science student at McMaster University.
-            At school, I learnt knowledge of Computer Science fundamentals such as object-oriented design, data structures and algorithm, and problem solving.
-            I have a knowledge of the syntax of languages such as Java, Python, javascript, some assembly languages including MIPS and NASM, and some functional languages such as Haskell, elm, and Scala.
+        <p>Hi, my name is Jin Sunwoo. I am a 3rd year Computer Science student at McMaster University. <br>
+            I like trying new things and build stuffs that can contribute to others. <br>
+            When I am not coding, as a coffee-lover, I go out to grab a coffee with my favorite people or spend time with my dog “Jerry”. 
         </p>
         <div class="about__skills">
             <h2>Technical Skills</h2>
@@ -95,24 +102,40 @@
         <h1>Projects</h1>
         <div class="work__projects">
             <div class="project__detail">
-                <img src="images/personalspace.png" alt="PersonalSpace" class=project__img>
-                <h3>Personal Space</h3>
-                <button class="skillBtn2">Python</button>
-                <button class="skillBtn2">Python</button>
-                <button class="skillBtn2">Python</button>
+                <img src="images/personalspace3.png" alt="PersonalSpace" class=project__img>
+                <h3 class="project__detail-title">Personal Space</h3>
+                <button class="skillBtn2">Javascript</button>
+                <button class="skillBtn2">Flask</button>
+                <button class="skillBtn2">Amazon AWS</button>
+                <button class="skillBtn2">mongoDB</button>
                 <div class=project__detail--description>
-                    <h5>An interactive dashboard that displays information on McMaster’s Engineering students and their internship career thus far, for which the data was extracted from LinkedIn.com
-                        All data was scraped from public profiles only.</h5>
+                    <h5>A web-based diary, with user authentication, that links daily words with emoticons so that users can track their emotions over time. </h5>
                 </div>
-                <button class="skillBtn3">
+                <button class="skillBtn3" onclick="window.location.href='https://github.com/jinsunwoo/personal-space';">
                     <i class="fab fa-github"></i>
                     Detail</button>
-                <button class="skillBtn3">Video Demo</button>
-                <button class="skillBtn3">Check the Project</button>
+                <button class="skillBtn3" data-toggle="modal" data-target="#video-1">Video Demo</button>
+                <button class="skillBtn3" onclick="window.location.href='http://personalspace.co.kr/';">Check the Project</button>
+            </div>
+            <div class="project__detail">
+                <img src="images/hospitalkImage.png" alt="PersonalSpace" class=project__img>
+                <h3 class="project__detail-title">Hospitalk</h3>
+                <button class="skillBtn2">Vue.js</button>
+                <button class="skillBtn2">Tensorflow.js</button>
+                <button class="skillBtn2">JavaScript</button>
+                <div class=project__detail--description>
+                    <h5>A web-app that utilizes machine learning from Google’s teachable machine to facilitate communication between hearing impaired patients and hospital workers. The camera will read sign language from patients and it will be displayed on the board with speech which was implemented with Amazon polly API.
+                    </h5>
+                </div>
+                <button class="skillBtn3" onclick="window.location.href='https://github.com/jinsunwoo/HospiTalk';">
+                    <i class="fab fa-github"></i>
+                    Detail</button>
+                <button class="skillBtn3" data-toggle="modal" data-target="#video-2">Video Demo</button>
+                <button class="skillBtn3" onclick="window.location.href='https://hospitalk.netlify.app/';">Check the Project</button>
             </div>
             <div class="project__detail">
                 <img src="images/personalspace.png" alt="PersonalSpace" class=project__img>
-                <h3>Personal Space</h3>
+                <h3 class="project__detail-title">Personal Space</h3>
                 <button class="skillBtn2">Python</button>
                 <button class="skillBtn2">Python</button>
                 <button class="skillBtn2">Python</button>
@@ -123,24 +146,43 @@
                 <button class="skillBtn3">
                     <i class="fab fa-github"></i>
                     Detail</button>
-                <button class="skillBtn3">Video Demo</button>
+                <button class="skillBtn3" data-toggle="modal" data-target="#video-3">Video Demo</button>
                 <button class="skillBtn3">Check the Project</button>
             </div>
-            <div class="project__detail">
-                <img src="images/personalspace.png" alt="PersonalSpace" class=project__img>
-                <h3>Personal Space</h3>
-                <button class="skillBtn2">Python</button>
-                <button class="skillBtn2">Python</button>
-                <button class="skillBtn2">Python</button>
-                <div class=project__detail--description>
-                    <h5>An interactive dashboard that displays information on McMaster’s Engineering students and their internship career thus far, for which the data was extracted from LinkedIn.com
-                        All data was scraped from public profiles only.</h5>
+            <!--Bootstrap Modals-->
+            <div class="modal fade" id="video-3">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                    <video width="100%" controls>
+                        <source src="litebyte_demo.mov" type="video/mov">
+                    </video>
+                    </div>
+
                 </div>
-                <button class="skillBtn3">
-                    <i class="fab fa-github"></i>
-                    Detail</button>
-                <button class="skillBtn3">Video Demo</button>
-                <button class="skillBtn3">Check the Project</button>
+                </div>
+            </div>
+            <div class="modal fade" id="video-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                    <video width="100%" controls>
+                        <source src="personalspace.mp4" type="video/mp4">
+                    </video>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="modal fade" id="video-2">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                    <video width="100%" controls>
+                        <source src="hospitalk.mp4" type="video/mp4">
+                    </video>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
     </section>
@@ -189,10 +231,10 @@
     <section id="contact" class="section">
         <h4 class="contact__title">Created by Jin Sunwoo</h4>
         <div class="contact__links">
-            <a href="https://www.github.com/jinsunwoo" target="_blank" class="contact__links__logo">
+            <a href="mailto: sunwooj@mcmaster.ca" target="_blank" class="contact__links__logo">
                 <i class="far fa-envelope"></i>
             </a>
-            <a href="https://www.github.com/jinsunwoo" target="_blank" class="contact__links__logo">
+            <a href="https://www.linkedin.com/in/jin-sunwoo-27672812b/" target="_blank" class="contact__links__logo">
                 <i class="fab fa-linkedin"></i>
             </a>
             <a href="https://www.github.com/jinsunwoo" target="_blank" class="contact__links__logo">
