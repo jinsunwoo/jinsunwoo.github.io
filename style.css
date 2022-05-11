@@ -262,7 +262,8 @@ h5 {
 .experience {
   border: 2px solid gainsboro;
   border-radius: 1%;
-  padding: 40px 0;
+  padding: 40px 40px;
+  margin: 40px 0px;
 }
 
 .education__logo {
@@ -350,4 +351,8 @@ h5 {
 #jinsunwoo {
   pointer-events: none;
   cursor: default;
+}
+
+#experience_title {
+  font-weight: bold;
 }
